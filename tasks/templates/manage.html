@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container-fluid">
+
+
+            <p class="display-5 text-center py-5 fw-normal">
+               Administración de fechas y cupos de citas
+            </p>
+            <form action="/manage/" method="POST" class="card card-body mb-5 fs-6 text-start" style="width: 70%; margin: 0 auto;">
+
+
+                
+                {{error}}
+
+                {% csrf_token %}
+                {{form.as_p}}
+                <p class="fs-4 fw-semibold text-center">
+                {{message}}
+            </p>
+                <button class="btn btn-secondary"  name="formone">
+                    Añadir fecha
+                </button>
+            </form>
+  
+    <script>
+        $(document).ready(function() {
+            $('#id_especialidad').change(function() {
+                var especialidad_id = $(this).val();
+                if (especialidad_id) {
+                    $.ajax({
+                        url: '/doctorbysp/',
+                        data: {
+                            'especialidad_id': especialidad_id
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            $('#id_doctor').empty().append($('<option>', {
+                                value: '',
+                                text: 'Seleccione un doctor'
+                            }));
+                            $.each(data, function(index, doctor) {
+                                $('#id_doctor').append($('<option>', {
+                                    value: doctor.id,
+                                    text: doctor.nombre
+                                }));
+                            });
+                            $('#id_doctor').removeAttr('disabled'); // Habilitar el campo Doctor
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.error('Error:', errorThrown);
+                        }
+                    });
+                } else {
+                    $('#id_doctor').empty().attr('disabled', 'disabled'); // Limpiar y deshabilitar el campo Doctor si no se selecciona una especialidad
+                }
+            });
+
+        });
+    </script>
+    
+</main>
+
+{% endblock %}

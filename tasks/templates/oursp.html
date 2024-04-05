@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<main>
+
+    <div class="container-fluid mb-3" id="headersp">
+       <div class="row justify-content-center text-center">
+        <div class="col-8" id="cont">
+            <p class="display-2" id="titulo">
+                Conozca nuestros servicios
+            </p>
+            <p id="parrafo">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ea voluptatem repellat perferendis illo fugit voluptas incidunt suscipit aliquid nesciunt. Harum eius quas numquam soluta! Tempore commodi perspiciatis autem, facilis nemo sint optio.
+            </p>
+        </div>
+       </div>
+    </div>
+
+
+    <div class="container mb-5 pb-5">
+        <div class="row justify-content-center text-start my-3">
+         <div class="col" id="cont">
+             <p class="display-3" id="titulo">
+                 Servicios
+             </p>
+             <p class="text-center px-1" id="parrafo">
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ea voluptatem repellat perferendis illo fugit voluptas incidunt suscipit aliquid nesciunt. Harum eius quas numquam soluta! Tempore commodi perspiciatis autem, facilis nemo sint optio.
+             </p>
+         </div>
+        </div>
+     </div>
+
+
+
+     <div id="carouselExampleIndicators" class="carousel carousel-dark slide align-items-center text-center justify-content-center">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner align-items-center text-center justify-content-center container">
+            
+          <div class="carousel-item active">
+            <div class="row g-2 justify-content-center text-center">
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/blood-bank.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                    <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                    Banco de Sangre
+                    </a>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/laboratory.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                        <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                    Laboratorio
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/emergency.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                        <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                   Emergencia
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/hemodinamia.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                        <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                    Hemodinamia
+                    </a>
+                    </div>
+                </div>
+            </div>            
+           </div>
+          </div>
+          <div class="carousel-item active">
+            <div class="row g-2 justify-content-center text-center">
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/rehabcard.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                    <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                    Rehabilitación Cardíaca
+                    </a>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/rehab.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                        <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                    Rehabilitación Física
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/obst.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                        <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                   Obstetricia
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/gen.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                        <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                    Genética
+                    </a>
+                    </div>
+                </div>
+            </div>            
+           </div>
+          </div>
+          <div class="carousel-item active">
+            <div class="row g-2 justify-content-center text-center">
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/resp.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                    <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                    Terapia Respiratoria
+                    </a>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/onc.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                        <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                    Tratamiento Ambulatorio y Oncológico
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/int.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                        <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                   Intervencionismo
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-auto">
+                <div class="card" style="width: 17em;">
+                    <img src="{% static 'images/uci.jpg' %}" class="card-img-top" alt="" height="230px" width="200px">
+                    <div class="card-body bg-primary-subtle" style="height:90px">
+                        <a href="#" class="fs-5 card-text text-dark text-decoration-none">
+                   Cuidados Intensivos Adultos
+                    </a>
+                    </div>
+                </div>
+            </div>            
+           </div>
+          </div>          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+<br><br><br><br>
+</main>
+
+
+{% endblock %}

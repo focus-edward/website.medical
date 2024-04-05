@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container-fluid py-5">
+
+
+            <p class="display-3 text-center py-5 fw-normal">
+                Gestión de doctores
+            </p>
+            
+            <form action="/gestiondr/" method="POST" class="card card-body mb-5" style="width: 70%; margin: 0 auto;">
+
+
+                <p class="display-5 text-center">
+                    Activación y desactivación de doctores
+                </p>
+                {{error}}
+                {{message}}
+                {% csrf_token %}
+                {{form.as_p}}
+
+                <button class="btn btn-secondary"  name="formone">
+                    Actualizar
+                </button>
+            </form>
+
+        <form action="/gestiondr/" method="POST" class="card card-body py-5" style="width: 70%; margin: 0 auto;">
+
+                <p class="display-5 text-center">
+                    Añadir Doctor Nuevo
+                </p>
+                {{error2}}
+                {% csrf_token %}
+                {{form2.as_p}}
+                {{message2}}
+                <button class="btn btn-secondary"  name="formtwo">
+                    Guardar
+                </button>
+            </form>
+
+
+
+</main>
+
+{% endblock %}

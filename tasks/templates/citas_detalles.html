@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container-fluid py-5">
+    <div class="row  align-items-center justify-content-center">
+        <div class="col-8 mt-5">
+            {{error}}
+            <h1 class="display-3 text-center py-5">Detalles de cita</h1>
+            <p class="fs-4 py-5">Especialidad: {{citas.Especialidad}}
+                <br>
+                Doctor/a: {{citas.Doctor}} 
+                <br>
+                Consultorio: {{citas.Consultorio}}
+                <br>
+                Fecha: {{citas.fecha}}
+                <br>
+                Hora: {{citas.Hora}}
+                <br>
+                Estado: {{citas.Estado}}
+                <br>
+                Nombre del paciente: {{citas.Nombre_del_paciente}}
+                <br>
+                Cédula del paciente: {{citas.Cédula_del_paciente}}
+                <br>
+                Teléfono: {{citas.Teléfono_de_contacto}}
+                <br>
+                Síntomas: {{citas.Síntomas}}
+                <br>
+                Información relevante: {{citas.Información_relevante}}
+                <br>
+                Fecha de solicitud: {{citas.created}}
+                <br>
+                {% if user.perfilanalista.is_analista %}
+                Usuario: {{citas.user}}
+                <br>
+                Fecha de completado: {{citas.datecompleted}}
+                {% endif %}
+            </p>
+
+            {% if user.perfilusuario.is_usuario %}
+
+            {% if citas.datecompleted is None %}
+                {% csrf_token %}
+                <button class="btn btn-outline-dark">
+                    <p class="fs-5 fw-medium">
+                Suspender Cita
+            </p>
+                </button>
+
+            {% endif %}
+
+            {% endif %}
+
+
+
+
+            {% if user.perfilanalista.is_analista %}         
+            <div class="mt-5 d-flex">
+                <form action="{% url 'citas_detalles' citas.id %}" method="POST" class="card card-body" style="width:35em">
+
+                    <p class="display-4 text-center">
+                        Cambiar estado de cita
+                    </p>
+                    <p class="fs-5 fw-semibold text-center">
+                    {{ message }}
+                    {{error}}
+                </p>
+                    {% csrf_token %}
+                    {{form.as_p}}
+                
+                    <button class="btn btn-secondary">
+                        Actualizar estado
+                    </button>
+                </form>
+            {% endif %}
+
+            </div>
+
+
+        </div>
+        <br><br><br><br>
+        <br><br><br><br>
+
+        <br><br><br><br>
+
+    </div>
+</main>
+
+{% endblock %}

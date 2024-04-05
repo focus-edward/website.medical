@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container py-5">
+
+
+            <form action="/citas/create/" method="POST" class="card card-body py-3" style="width: 70%; margin: 0 auto;">
+
+                <p class="display-4 text-center mb-5 mt-3">
+                    Solicitud de Cita Medica
+                </p>
+
+                {{error}}
+                {% csrf_token %}
+        
+                {{form.as_p}}
+                
+                <button class="btn btn-secondary">
+                    Crear Cita Medica
+                </button>
+            </form>
+            
+
+    <br><br><br><br>
+</main>
+
+
+{% endblock %}

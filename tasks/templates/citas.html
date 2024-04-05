@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container-fluid px-5">
+
+            <h1 class="text-center display-3 py-5">Apartado de Citas Medicas</h1>
+            <br><br>
+            <p class="display-4 pb-5 text-center">
+                {{header_cita}}
+            </p>
+            <ul class="list-group">
+                {% for cita in citas %}
+                
+                <a class="list-group-item custom-select" href="{% url 'citas_detalles' cita.id %}">
+                    <header class="d-flex justify-content-between">
+
+                    <h2 class="fw-semibold py-2">
+                        Dr. {{cita.Doctor}} - {{cita.Especialidad}}
+                    </h2>
+        
+                    </header>
+                    <p class="fs-4">Fecha de la cita: {{cita.fecha}}</p>
+                    <p class="fs-4">Fecha de completada: {{cita.datecompleted}}</p>
+                    <p class="fs-4">Paciente: {{cita.Nombre_del_paciente}}</p>
+                </a>
+
+                {% endfor %}
+            </ul>
+
+    <br><br><br><br>
+    <br><br><br><br>
+
+    <br><br><br><br>
+</main>
+{% endblock %}

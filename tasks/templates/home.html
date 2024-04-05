@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="mt-3 container-fluid py-5 text-center">
+    <section id="main">
+        <div class="row text-center align-items-center justify-content-center mb-5">
+            <div class="col-7 mb-5">
+            <h2 class="display-1 text-center mb-5">Centro Medico Lorem Ipsum</h2>
+            <p class="mb-5 fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nemo odio officia, natus nihil distinctio in aperiam? Esse asperiores culpa alias reiciendis modi tempora repellat recusandae, commodi laboriosam cumque ab? Corporis, amet reiciendis. Tempora quisquam nihil, voluptate ab aspernatur natus minus! Eos in est doloremque, reprehenderit iusto atque accusantium maxime officia odit fugit aliquam omnis cum doloribus impedit. </p>
+            </div>
+
+            <div class="col-md-auto mx-3">
+                {% load static %}
+                <img src="{% static 'images/bg-main.png' %}" height="500" width="500">
+            </div>
+        </div>
+    </section>
+    <section id="profesionals">
+        <br>
+        <br>
+        <br>
+        <div class="mt-5">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-auto mx-4">
+
+                    <img src="{% static 'images/doctor-2.png' %}" height="500" width="500">
+                </div>            
+                <div class="col-7 mb-5">
+                    <h2 class="display-1 mb-5">Medicos profesionales a tu disposicion</h2>
+                    <p class="mb-5 fs-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusantium unde voluptates placeat accusamus cum beatae, voluptatibus deleniti ad corporis, inventore consequatur rem hic! Reprehenderit nisi ducimus harum unde omnis veniam, quo, aut eligendi cupiditate, mollitia nesciunt amet numquam repudiandae? </p>
+                    <button type="button" class="btn btn-outline-dark">
+                        <h5>Conoce nuestros doctores<br> y especialistas</h5>
+                    </button>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+</main>
+<section id="entry">
+    <div class="buttonentry">
+
+    <a href="/citas/create/" class="btn btn-outline-dark" id="btn-entry">
+        <p class="fw-bold text">Solicitar Cita</p>
+    </a>
+    </div>
+</section>
+
+
+{% endblock %}
