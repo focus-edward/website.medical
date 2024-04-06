@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'sitiocrud.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='postgres://sitiocrud_user:eUcYwnJhHtGRCcHemBZO0dg0drDOgp58@dpg-co8dlhuv3ddc73fga120-a/sitiocrud',
         conn_max_age=600
     )
 }
