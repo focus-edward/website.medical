@@ -83,11 +83,14 @@ WSGI_APPLICATION = 'sitiocrud.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgres://sitiocrud_e0se_user:2NL5lUwhYHmNCkvQcCAiyyOnyfX9Kupo@dpg-co8f0an109ks73edgb5g-a/sitiocrud_e0se',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sitiocrud_e0se',
+        'USER': 'sitiocrud_e0se_user',
+        'PASSWORD': '2NL5lUwhYHmNCkvQcCAiyyOnyfX9Kupo',
+        'HOST': 'dpg-co8f0an109ks73edgb5g-a',
+        'PORT': '5432',
+    }
 }
 
 
