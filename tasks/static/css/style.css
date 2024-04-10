@@ -129,7 +129,7 @@ footer {
 
     .buttonentry .btn-outline-dark{
         align-items: center;
-        align-content: center;
+        align-content: space-around;
         font-size: 1.7vw;
         height:6vw;
         width:13%;
