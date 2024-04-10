@@ -22,7 +22,9 @@
         
                     </header>
                     <p class="fs-4">Fecha de la cita: {{cita.fecha}}</p>
+                    {% if not cita.datecompleted is None %}
                     <p class="fs-4">Fecha de completada: {{cita.datecompleted}}</p>
+                    {% endif %}
                     <p class="fs-4">Paciente: {{cita.Nombre_del_paciente}}</p>
                     {% csrf_token %}
                 </a>
