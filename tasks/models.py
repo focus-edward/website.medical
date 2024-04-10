@@ -78,7 +78,7 @@ class Citas(models.Model):
     Doctor = models.ForeignKey(Doctor, on_delete=models.SET_NULL, null=True)
     Calendario_de_disponibilidad = models.ForeignKey(DisponibilidadCita, on_delete=models.SET_NULL, null=True)
     fecha = models.CharField(max_length=12, default='01/01/2024')
-    Hora = models.TimeField()
+    Hora = models.CharField(max_length=12)
     Consultorio = models.CharField(max_length=3)
     Estado = models.TextField(default='Pendiente')
     paciente = models.ForeignKey(Paciente, on_delete=models.SET_NULL, null=True)
